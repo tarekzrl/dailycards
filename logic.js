@@ -74,7 +74,34 @@ var resultItem;
                              	$("#results-block").append(resultItem);
 								}
                 	                                }
-						}
+	                                                else if (data.image)
+        	                                        {
+
+                	                                        var imag=new Image();
+                        	                                imag.src=data.image;
+                                	                        $(imag).load(function() {
+                                        	                        if(imag.width>399)
+                                                	                {
+									resultItem= "<div class='item'><div class='article'><a class='l' title='"+data.title+"' href='"+data.canonical+"' style='background-image: url("+data.image+");'></a><div class='o'><header class='h'><h1 class='t' title='"+data.title+"'>"+data.title+"</h1><p class='m'><img style='width:16px;height:16px;margin-right:.125em;vertical-align:middle;' src='"+data.icon+"'><a href='"+data.canonical+"' target='_blank'>"+data.site+"</a></p></header></div></div></div>";
+					                                $("#results-block").append(resultItem);
+                                        	                        }
+                                                	        });
+                                                	}
+        	                                        else if (data.oembed.image)
+        	                                        {
+	
+                	                                        var imag=new Image();
+                        	                                imag.src=data.oembed.image;
+                                	                        $(imag).load(function() {
+                                        	                        if(imag.width>399)
+                                                	                {
+									resultItem= "<div class='item'><div class='article'><a class='l' title='"+data.title+"' href='"+data.canonical+"' style='background-image: url("+data.oembed.image+");'></a><div class='o'><header class='h'><h1 class='t' title='"+data.title+"'>"+data.title+"</h1><p class='m'><img style='width:16px;height:16px;margin-right:.125em;vertical-align:middle;' src='"+data.icon+"'><a href='"+data.canonical+"' target='_blank'>"+data.site+"</a></p></header></div></div></div>";
+					                                $("#results-block").append(resultItem);
+                                        	                        }
+                                                	        });
+	                                                	}
+
+							}
                                                 else if (data.image)
                                                 {
 
