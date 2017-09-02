@@ -61,17 +61,22 @@ var resultItem;
                                                                 if ((data.oembed.html).substring(10, 26)=="twitter-timeline")
                                                                 {
                                                                 resultItem= "<div class='item'><a class='twitter-timeline' data-tweet-limit=1 href='"+data.canonical+"'></a><script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script></div>";
-                             	$("#results-block").append(resultItem);
+				                             	$("#results-block").append(resultItem);
                                                                 }
                                                                 else if (data.oembed.type=='video')
 								{
                                                                 resultItem= "<div class='player'>"+data.oembed.html+"</div>";
-                             	$("#results-block").append(resultItem);
+                             					$("#results-block").append(resultItem);
+								}
+                                                                else if ((data.oembed.provider_name=='Variety') || (data.oembed.provider_name=='TechCrunch'))
+								{
+                                                		resultItem= "<div class='item'><div class='article'><a class='l' title='"+data.title+"' href='"+data.canonical+"' style='background-image: url("+data.image+");'></a><div class='o'><header class='h'><h1 class='t' title='"+data.title+"'>"+data.title+"</h1><p class='m'><img style='width:16px;height:16px;margin-right:.125em;vertical-align:middle;' src='"+data.icon+"'><a href='"+data.canonical+"' target='_blank'>"+data.site+"</a></p></header></div></div></div>";
+                             					$("#results-block").append(resultItem);
 								}
                                                                 else
 								{		
                                                                 resultItem= "<div class='item'>"+data.oembed.html+"</div>";
-                             	$("#results-block").append(resultItem);
+				                             	$("#results-block").append(resultItem);
 								}
                 	                                }
 	                                                else if (data.image)
