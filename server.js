@@ -366,7 +366,7 @@ if(json.image) {
 	if(url.indexOf("en.wikipedia.org/wiki")>-1) {
 getextract(function(data) {
 json.title=data.title;
-json.definition=data.extract;
+json.description=data.extract;
 getdimensions(function(data) {
 json.width=data.width;
 json.height=data.height;
