@@ -286,7 +286,7 @@ if (json.icon.substring(0,4) != "http") json.icon = "http://" + json.icon;
                 var lmth = $('meta[name="newrelic-resource-path"]').attr('content');
 if(lmth) {
                 var id = lmth.substring(lmth.lastIndexOf('/') + 1);
-                json.html = "<div id=\'rg_embed_link_" + id + "\' class=\'rg_embed_link\' data-song-id=\'" + id + "\'></div><script src=\'//genius.com/songs/" + id + "/embed.js?dark=1\'></script>";
+                json.html = "<div id=\'rg_embed_link_" + id + "\' class=\'rg_embed_link\' data-song-id=\'" + id + "\'></div><script async src=\'https://genius.com/songs/" + id + "/embed.js?dark=1\'></script>";
 }
                 var med = $('meta[itemprop="page_data"]').attr('content');
                 var songs = JSON.parse(med);
