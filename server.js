@@ -335,7 +335,7 @@ callback(result);
 }
 
             if (oembed) {
-                function getoembed(callback) {
+				    function getoembed(callback) {
                     needle.get(oembed, function(error, response, html) {
                         callback(response.body);
                     });
@@ -344,10 +344,10 @@ callback(result);
                 getoembed(function(data) {
                     if (data) {
 			if (data.provider_name =="Flickr")
-				{data.html = data.html.replace('width=\"1024\" height=\"680\"','width=\"100%\"');}
+				{data.html = "<a data-flickr-embed='true' href='"+json.canonical+"' title='"+json.title+"'><img src='"+data.url+"' width='100%' height='100%' alt='"+data.title+"'></a><script async src=\'https://embedr.flickr.com/assets/client-code.js\' charset=\'utf-8\'></script>";}
 			else if (data.provider_name =="Vimeo")
-				{data.html = data.html.replace('width=\"640\" height=\"360\" frameborder=\"0\"','style="width:100%; height:100%; position:absolute; border:0;');}
-
+				{data.html = "<iframe src='"+json.canonical+"' width='100%' height='100%' frameborder='0' title='"+json.title+"' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";}
+console.log("oembed detected");
                         json.oembed = data;
 if(json.image) {
 getdimensions(function(data) {
