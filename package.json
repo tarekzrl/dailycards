@@ -1,6 +1,6 @@
 {
   "name": "dailycards",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "output json from html",
   "main": "server.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tarekzrl/dailycards.git"
+    "url": "git+https://github.com/tarekzrl/dcweb.git"
   },
   "keywords": [
     "parse",
@@ -22,9 +22,9 @@
   "author": "tarekzrl",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/tarekzrl/dailycards/issues"
+    "url": "https://github.com/tarekzrl/dcweb/issues"
   },
-  "homepage": "https://github.com/tarekzrl/dailycards#readme",
+  "homepage": "https://github.com/tarekzrl/dcweb#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.15.4",
