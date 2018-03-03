@@ -7,16 +7,16 @@
 `docker build -t dailycards .`    
 `docker run -p 5011:5011 -d dailycards`    
 
-#### usage example
-`node server`    
-then use your browser    
-`http://localhost:5011/json?url=https://en.wikipedia.org/wiki/Tunisia`
-
 #### deploy on heroku
 Assuming that you have a free Heroku account, and that you have Node.js and npm installed locally.    
 `heroku create`    
 `git push heroku master`    
-`heroku open`    
+`heroku open`  
+
+#### usage example
+`node server`    
+then use your browser    
+`http://localhost:5011/json?url=https://en.wikipedia.org/wiki/Tunisia`
 
 #### output example
 ```{
@@ -66,10 +66,10 @@ Assuming that you have a free Heroku account, and that you have Node.js and npm 
 <img width="24" src="http://assetcdn.500px.org/assets/favicon-7d8942fba5c5649f91a595d0fc749c83.ico"/> <img width="24" src="https://open.scdn.co/static/images/favicon.png"/> <img width="24" src="http://en.wikipedia.org/static/favicon/wikipedia.ico"/> <img width="24" src="http://genius.com/favicon.ico"/> <img width="24" src="http://www.youtube.com/yts/img/favicon_32-vfl8NGn4k.png"/> <img width="24" src="https://f.vimeocdn.com/images_v6/favicon.ico"/>
 <img width="24" src="http://static1.dmcdn.net/images/neon/favicons/android-icon-36x36.png.vf806ca4ed0deed812"/> <img width="24" src="http://ia.media-imdb.com/images/G/01/imdb/images/safari-favicon-517611381._CB522736552_.svg"/> <img width="24" src="https://staticv2-4.rottentomatoes.com/static/images/icons/favicon.ico"/> <img width="24" src="https://v.cdn.vine.co/w/8d600eb8-assets/images/favicon.ico"/> <img width="24" src="https://static01.nyt.com/favicon.ico"/> <img width="24" src="https://pa.tedcdn.com/favicon.ico"/>
 <img width="24" src="https://static.xx.fbcdn.net/rsrc.php/yV/r/hzMapiNYYpW.ico"/> <img width="24" src="http://abs.twimg.com/favicons/favicon.ico"/>
-<img width="24" src="http://www.twitch.tv/favicon.ico"/> <img width="24" src="http://www.redditstatic.com/icon.png"/> <img width="24" src="http://instagram.com/static/images/ico/favicon-192.png/b407fa101800.png"/> <img width="24" src="http://itunes.apple.com/favicon.ico"/> <img width="24" src="https://giphy.com/static/img/favicon.png"/> <img width="24" src="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico"/> <img width="24" src="https://www.mixcloud.com/media/images/www/global/favicon.ico"/> <img width="24" src="https://s.yimg.com/pw/favicon.ico"/> <img width="24" src="https://public.slidesharecdn.com/favicon.ico?d8e2a4ed15"/> <img width="24" src="https://cdn-img.easyicon.net/png/11266/1126624.gif"/> <img width="24" src="http://media-channel.nationalgeographic.com/static-media/images/favicon.ico"/>
+<img width="24" src="http://www.twitch.tv/favicon.ico"/> <img width="24" src="http://www.redditstatic.com/icon.png"/> <img width="24" src="http://instagram.com/static/images/ico/favicon-192.png/b407fa101800.png"/> <img width="24" src="http://itunes.apple.com/favicon.ico"/> <img width="24" src="https://giphy.com/static/img/favicon.png"/> <img width="24" src="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico"/> <img width="24" src="https://www.mixcloud.com/media/images/www/global/favicon.ico"/> <img width="24" src="https://s.yimg.com/pw/favicon.ico"/> <img width="24" src="https://public.slidesharecdn.com/favicon.ico?d8e2a4ed15"/> <img width="24" src="http://media-channel.nationalgeographic.com/static-media/images/favicon.ico"/>
 
 ###### live version
-https://dailycards.herokuapp.com/json?url=
-###### slightly improved live version
+https://dailycardsweb.herokuapp.com/json?url=
+###### user interface
 just put your url and witness the magic    
 https://dailycardsweb.herokuapp.com
