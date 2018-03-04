@@ -8,7 +8,11 @@ body.results { padding-top:100px; background:#fff;}
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 }
-        #search-block { z-index:1000; position:absolute; top:35%; width:100%; padding:20px 0; margin:auto; background:#f7f7f7;}
+        #search-block { z-index:1000; position:absolute; top:35%; width:100%; padding:5px 0; margin:auto; background:#f7f7f7;}
+        #im {text-align:center; padding-top:5px;display:block;margin:auto; height: 100%;width:100%;}
+        
+        .imgr {display:inline-block; }
+
 	body.results #search-block { position:fixed; top:0; border-bottom:#d0d0d0 1px solid;}
 		#search-block-inner { position:relative; width:100%; max-width:635px; margin:0 auto;}
 		body.results #search-block-inner { width:100%; max-width:635px; margin:0 auto;}
