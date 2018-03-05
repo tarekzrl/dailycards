@@ -315,6 +315,16 @@ if(lmth) {
 json.html="<object data='"+url+"' width='100%' height='100%' type='application/pdf'><iframe style='position:absolute; border: 0; width: 100%; height: 100%;' src='https://docs.google.com/viewer?url="+url+"&embedded=true'></iframe></object>";
 }
 
+if((url.indexOf("yelp.com")>-1) & (url.indexOf("hrid=")>-1)) {
+	
+	id = url.substring(url.lastIndexOf('=') +1);
+	
+	json.html = "<span class='yelp-review' data-review-id='"+id+"' data-hostname='www.yelp.com'><script async='async' src='https://www.yelp.com/embed/widgets.js' type='text/javascript'></script></span>";
+}
+else if (url.indexOf("behance.net/gallery")>-1) {
+	json.html= "<iframe width='100%' height='500px' frameborder='0' src='"+ url + "?iframe=1'></iframe>";
+}
+
 function getextract(callback) {
 var canonical = url;
 var uri = canonical.replace('en.wikipedia.org\/wiki\/', 'en.wikipedia.org\/w\/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=');
