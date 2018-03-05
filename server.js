@@ -355,6 +355,9 @@ callback(result);
 				{data.html = "<a data-flickr-embed='true' href='"+json.canonical+"' title='"+json.title+"'><img src='"+data.url+"' width='100%' height='100%' alt='"+data.title+"'></a><script async src=\'https://embedr.flickr.com/assets/client-code.js\' charset=\'utf-8\'></script>";}
 			else if (data.provider_name =="Vimeo")
 				{data.html = "<iframe src='"+json.canonical+"' width='100%' height='100%' frameborder='0' title='"+json.title+"' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";}
+				else  if ((json.site == "Coub") && (data.html)) {
+				json.player = json.player.replace('http://c-cdn.coub.com/fb-player.swf?bot_type=unknown&coubID=', 'https://coub.com/embed/');
+			}
                         json.oembed = data;
 if(json.image) {
 getdimensions(function(data) {
