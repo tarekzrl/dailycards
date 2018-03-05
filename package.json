@@ -1,6 +1,6 @@
 {
   "name": "dailycards",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "output json from html",
   "main": "server.js",
   "scripts": {
