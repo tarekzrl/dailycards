@@ -225,7 +225,10 @@ if (json.icon.substring(0,4) != "http") json.icon = "http://" + json.icon;
                 oembed = aoembed;
             } else if (toembed) {
                 oembed = toembed;
-            } else if (url.indexOf("instagram.com/p/") > -1) {
+            } 
+            else if (url.indexOf("behance.net/gallery") > -1) {
+				oembed = "https://www.behance.net/services/oembed?url=" + url;
+			} else if (url.indexOf("instagram.com/p/") > -1) {
                 oembed = "https://api.instagram.com/oembed/?url=" + url;
             } else if ((url.indexOf("spotify.com/track/") > -1) || (url.indexOf("spotify.com/artist") > -1) || (url.indexOf("spotify.com/album") > -1)) {
                 oembed = "https://open.spotify.com/oembed?format=json&url=" + url;
