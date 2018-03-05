@@ -209,7 +209,13 @@ if (json.icon.substring(0,4) != "http") json.icon = "http://" + json.icon;
                 json.html = "<div class='pixels-photo'><p><img src='" + json.image + "' alt='" + json.title + " | 500px'></p><a href='" + json.canonical + "' alt='" + json.title + " | 500px'></a></div><script type='text/javascript' src='https://500px.com/embed.js'></script>";
             } else if (url.indexOf("pinterest.com/pin/") > -1) {
                 json.html = "<a data-pin-do='embedPin' data-pin-width='large' href='"+json.canonical+"'></a><script async type='text/javascript' src='https://assets.pinterest.com/js/pinit.js'></script>";
-	    }
+			} 
+			
+			if (json.player.indexOf("autoplay=true") > -1) {
+				json.player=json.player.replace('autoplay=true', 'autoplay=false');
+			} else if (json.player.indexOf("autoplay=1") > -1) {
+				json.player=json.player.replace('autoplay=1', 'autoplay=0');
+			}
 
             var parsedResults = [];
             var oembed;
