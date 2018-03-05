@@ -16,8 +16,8 @@ $(function () {
 
         if (q != "undefined" && q != "") {
                 $("#search_box").attr("value",q);
-            //    var uri = "https://dailycards.herokuapp.com/json?url="  + qGet;
-		    var uri = "http://localhost:5011/json?url="  + qGet;
+                var uri = "https://dailycards.herokuapp.com/json?url="  + qGet;
+		//    var uri = "http://localhost:5011/json?url="  + qGet;
                 sendAjax(uri);
         }
 
