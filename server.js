@@ -211,11 +211,13 @@ if (json.icon.substring(0,4) != "http") json.icon = "http://" + json.icon;
                 json.html = "<a data-pin-do='embedPin' data-pin-width='large' href='"+json.canonical+"'></a><script async type='text/javascript' src='https://assets.pinterest.com/js/pinit.js'></script>";
 			} 
 			
+			if (json.player) {
 			if (json.player.indexOf("autoplay=true") > -1) {
 				json.player=json.player.replace('autoplay=true', 'autoplay=false');
 			} else if (json.player.indexOf("autoplay=1") > -1) {
 				json.player=json.player.replace('autoplay=1', 'autoplay=0');
 			}
+		}
 
             var parsedResults = [];
             var oembed;
