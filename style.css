@@ -12,7 +12,6 @@ body.results { padding-top:100px; background:#fff;}
         #im {text-align:center; padding-top:5px;display:block;margin:auto; height: 100%;width:100%;}
         
         .imgr {display:inline-block; }
-        #icons {position:absolute; bottom:0%; right: 0%;}
 
 	body.results #search-block { position:fixed; top:0; border-bottom:#d0d0d0 1px solid;}
 		#search-block-inner { position:relative; width:100%; max-width:635px; margin:0 auto;}
